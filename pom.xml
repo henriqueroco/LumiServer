@@ -3,4 +3,11 @@
   <groupId>tcc</groupId>
   <artifactId>tcc</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <dependencies>
+  	<dependency>
+  		<groupId>org.hibernate</groupId>
+  		<artifactId>hibernate-core</artifactId>
+  		<version>3.6.8.Final</version>
+  	</dependency>
+  </dependencies>
 </project>
