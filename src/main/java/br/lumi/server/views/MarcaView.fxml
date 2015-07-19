@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="250.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints minHeight="10.0" percentHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <GridPane GridPane.rowIndex="1">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="0.0" prefWidth="50.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints percentHeight="0.0" vgrow="SOMETIMES" />
+          <RowConstraints percentHeight="0.0" vgrow="SOMETIMES" />
+          <RowConstraints percentHeight="0.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Código" />
+            <Label text="Descrição" GridPane.rowIndex="1" />
+            <TextField fx:id="tfCodigo" GridPane.columnIndex="1" />
+            <TextField fx:id="tfDescricao" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <GridPane>
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" percentWidth="0.0" />
+          <ColumnConstraints hgrow="SOMETIMES" percentWidth="0.0" />
+            <ColumnConstraints hgrow="SOMETIMES" percentWidth="0.0" />
+          <ColumnConstraints hgrow="SOMETIMES" percentWidth="0.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" percentHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="btnFechar" mnemonicParsing="false" text="Fechar" GridPane.columnIndex="3" GridPane.halignment="RIGHT" />
+            <Button fx:id="btnSalvar" mnemonicParsing="false" text="Salvar" />
+            <Button fx:id="btnAtivarInativar" mnemonicParsing="false" text="Ativar/Inativar" GridPane.columnIndex="2" />
+            <Button fx:id="btnCancelar" mnemonicParsing="false" text="Cancelar" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+   </children>
+</GridPane>

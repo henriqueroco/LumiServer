@@ -1,4 +1,4 @@
-package br.lumi.server;
+package br.lumi.server.enuns;
 
 public enum EUf {
 
