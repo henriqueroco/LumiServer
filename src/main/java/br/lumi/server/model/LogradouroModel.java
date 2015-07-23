@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.MapsId;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -33,28 +34,29 @@ public class LogradouroModel {
 			@Parameter(name = "optimizer", value = "hilo"),
 			@Parameter(name = "increment_size", value = "1") })
 	@Column(name = ATRIBUTO_ID, nullable = false, unique = true)
-	Integer id;
+	private Integer id;
 	
 	@Column(name = ATRIBUTO_CEP, nullable = false)
-	String cep;
+	private String cep;
 	
 	@Column(name = ATRIBUTO_ENDERECO)
-	String endereco;
+	private String endereco;
 	
 	@Column(name = ATRIBUTO_NUMERO)
-	Integer numero;
+	private Integer numero;
 	
 	@Column(name = ATRIBUTO_COMPLEMENTO)
-	String complemento;
+	private String complemento;
 	
 	@Column(name = ATRIBUTO_BAIRRO)
-	String bairro;
+	private String bairro;
 	
 	@OneToOne(optional = false)
 	@JoinColumn(name = LogradouroModel.ATRIBUTO_ID, nullable = false)
 	@MapsId("idCliente")
-	ClienteModel clietne;
+	private ClienteModel clietne;
 	
-//	@Column(name = ATRIBUTO_
-	CidadeModel cidade;
+	@ManyToOne(optional = false)
+	@JoinColumn() 
+	private CidadeModel cidade;
 }

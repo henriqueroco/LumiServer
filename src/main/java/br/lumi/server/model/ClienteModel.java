@@ -48,45 +48,45 @@ public class ClienteModel {
 			@Parameter(name = "optimizer", value = "hilo"),
 			@Parameter(name = "increment_size", value = "1") })
 	@Column(name = ATRIBUTO_ID, nullable = false, unique = true)
-	String cpf;
+	private String cpf;
 	
 	@Column(name = ATRIBUTO_NOME, nullable = false)
-	String nome;
+	private String nome;
 	
 	@Temporal(TemporalType.DATE)
 	@Column(name = ATRIBUTO_DATA_NACIMENTO, nullable = false)
-	Date dataNacimento;
+	private Date dataNacimento;
 	
 	@Column(name = ATRIBUTO_IDADE, nullable = false)
-	Integer idade;
+	private Integer idade;
 	
 	@Column(name = ATRIBUTO_SEXO, nullable = false)
-	ESexo sexo;
+	private ESexo sexo;
 	
 	@Temporal(TemporalType.DATE)
 	@Column(name = ATRIBUTO_DATA_CADASTRO, nullable = false)
-	Date dataCadastro;
+	private Date dataCadastro;
 	
 	@Column(name = ATRIBUTO_TELEFONE)
-	String telefone;
+	private String telefone;
 	
 	@Column(name = ATRIBUTO_CELULAR, nullable = false)
-	String celular;
+	private String celular;
 	
 	@Column(name = ATRIBUTO_OCUPACAO)
-	String ocupacao;
+	private String ocupacao;
 	
 	@Column(name = ATRIBUTO_ESTADO_CIVIL, nullable = false)
-	EEstadoCivil estadoCivil;
+	private EEstadoCivil estadoCivil;
 	
 	@Column(name = ATRIBUTO_NOME_AVISO_EMERGENCIA)
-	String nomeAvisoEmergencia;
+	private String nomeAvisoEmergencia;
 	
 	@Column(name = ATRIBUTO_TELEFONE_EMERGENCIA)
-	String telefoneEmergencia;
+	private String telefoneEmergencia;
 	
 	@OneToOne(mappedBy = "convenio", cascade = CascadeType.ALL, orphanRemoval = true)
-	LogradouroModel logradouro;
+	private LogradouroModel logradouro;
 
 	public String getCpf() {
 		return cpf;
