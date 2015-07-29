@@ -3,6 +3,7 @@ package br.lumi.server.model;
 /**
  * @author WEIBER
  */
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.CascadeType;
@@ -23,7 +24,7 @@ import br.lumi.server.enuns.ESexo;
 
 @Entity
 @Table(name = ClienteModel.TABELA)
-public class ClienteModel {
+public class ClienteModel implements Serializable {
 	
 	static final String TABELA = "cliente";
 	static final String ATRIBUTO_ID = "cpf_id";

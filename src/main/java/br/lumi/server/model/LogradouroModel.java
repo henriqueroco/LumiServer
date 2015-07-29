@@ -1,5 +1,7 @@
 package br.lumi.server.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,16 +17,16 @@ import org.hibernate.annotations.Parameter;
 
 @Entity
 @Table(name = LogradouroModel.TABELA)
-public class LogradouroModel {
+public class LogradouroModel implements Serializable {
 
 	static final String TABELA = "logradouro";
 	static final String ATRIBUTO_ID = "id";
 	private static final String SEQUENCE_ID = "seq_id_logradouro";
-	private static final String ATRIBUTO_CEP = "";
-	private static final String ATRIBUTO_ENDERECO = "";
-	private static final String ATRIBUTO_NUMERO = "";
-	private static final String ATRIBUTO_COMPLEMENTO = "";
-	private static final String ATRIBUTO_BAIRRO = "";
+	private static final String ATRIBUTO_CEP = "cep";
+	private static final String ATRIBUTO_ENDERECO = "endereco";
+	private static final String ATRIBUTO_NUMERO = "numero";
+	private static final String ATRIBUTO_COMPLEMENTO = "complemento";
+	private static final String ATRIBUTO_BAIRRO = "bairro";
 	
 	@Id
 	@GeneratedValue(generator = LogradouroModel.SEQUENCE_ID)
