@@ -4,19 +4,11 @@
   <artifactId>tcc</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <dependencies>
-  
-	<dependency>
-		<groupId>org.jboss.spec.javax.ejb</groupId>
-		<artifactId>jboss-ejb-api_3.1_spec</artifactId>
-		<scope>provided</scope>
-	</dependency>
-		
   	<dependency>
   		<groupId>org.hibernate</groupId>
   		<artifactId>hibernate-core</artifactId>
   		<version>3.6.8.Final</version>
   	</dependency>
-	
 	<dependency>
 		<groupId>org.postgresql</groupId>
 		<artifactId>postgresql</artifactId>
@@ -24,14 +16,31 @@
 		<scope>test</scope>
 		<optional>true</optional>
 	</dependency>
-		
-				
-		<dependency>
-			<groupId>org.jboss.spec.javax.interceptor</groupId>
-			<artifactId>jboss-interceptors-api_1.1_spec</artifactId>
-			<scope>provided</scope>
-		</dependency>
-		
+  	<dependency>
+  		<groupId>org.jboss.spec.javax.ejb</groupId>
+  		<artifactId>jboss-ejb-api_3.1_spec</artifactId>
+  		<scope>provided</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.hibernate</groupId>
+  		<artifactId>hibernate-jpamodelgen</artifactId>
+  		<scope>provided</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>junit</groupId>
+  		<artifactId>junit</artifactId>
+  		<scope>test</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.jboss.arquillian.junit</groupId>
+  		<artifactId>arquillian-junit-container</artifactId>
+  		<scope>test</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.jboss.spec.javax.interceptor</groupId>
+  		<artifactId>jboss-interceptors-api_1.1_spec</artifactId>
+  		<scope>provided</scope>
+  	</dependency>
   </dependencies>
   <packaging>ejb</packaging>
 </project>

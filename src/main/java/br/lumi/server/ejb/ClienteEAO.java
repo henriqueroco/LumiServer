@@ -5,10 +5,12 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.criterion.Projections;
+
 import br.lumi.server.model.CidadeModel;
-import br.lumi.server.model.MarcaModel;
 import br.lumi.server.model.filtro.FiltroCidadeModel;
-import br.lumi.server.model.filtro.FiltroMarcaModel;
 
 
 //@Stateless
@@ -17,11 +19,13 @@ public class ClienteEAO {
 	@PersistenceContext
 	private EntityManager em;
 	
-	private CidadeModel salvarCidade(CidadeModel marca){
-		return null;
+	private CidadeModel salvarCidade(CidadeModel cidade){
+		cidade = em.merge(cidade);
+		em.flush();
+		return cidade;
 	}
-	private void excluirCidadePorId(Integer id){
-		
+	private void excluirCidadePorId(CidadeModel cidade){
+		em.remove(em.getReference(CidadeModel.class, cidade.getId()));
 	}
 	private CidadeModel consultarCidadePorCodigo(Integer codigo){
 		return null;
@@ -32,6 +36,10 @@ public class ClienteEAO {
 		
 	}
 	private CidadeModel consultarCidadePorFiltro(FiltroCidadeModel filtro){
+		Session session = em.unwrap(Session.class);
+		Criteria criteria = session.createCriteria(CidadeModel.class);
+//		criteria.setProjection(Projections.max(CidadeModel_.codigo.getName()));
+		
 		return null;
 		
 	}
